@@ -1,0 +1,362 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --blue:#3a63a8;
+    --salmon:#F27983;
+    --purple:#8E76A6;
+    --bgColor:#EDF0FF;
+    --green:#A2BF84;
+    --bluehv:rgba(95, 196, 236, 0.885);
+    --bluelg:rgb(139, 185, 249);
+    --yellow:#DDC392;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: medium;
+
+}
+body{
+    background-color: (var(--green));
+}
+nav{
+    position: fixed;
+ 
+    background-image: linear-gradient( var(--bluehv),var(--bluelg));
+    height: 100vh;
+    display: block;
+  
+z-index: 100;
+
+}
+
+nav>div>a{
+display: block;
+
+text-decoration: none;
+color:black;
+height: fit-content;
+padding:4px 10px;
+
+}
+
+.sidebar{
+    width:80px;
+    padding-top:20px;
+}
+.sidebar>span>img{
+
+    width:120px;
+    left:20px;
+}
+.sidebar>span>img:hover{
+    padding: 4px;
+    width:160px;
+}
+
+.sidebar:hover{
+    width:250px;
+}
+.sidebar>div:hover{
+    overflow: visible;
+}
+
+i{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+   
+   
+}
+.search{
+    display: flex;
+    gap:16px;
+    justify-content: center;
+}
+.sidebar>div{
+    display: flex;
+    flex-direction: column;
+    height:250px;
+    gap:16px;
+margin:40px 0px;
+overflow: hidden;
+    justify-content: center;
+  
+font-size: 25px;
+}
+a>i{
+margin: 0px 8px;
+
+padding:8px;
+
+}
+
+.links>a:hover{
+background-color:var(--blue);
+width:100%;
+
+
+}
+span{
+  
+
+ height:100px;
+
+
+}
+img{
+
+  max-width: 100%;
+max-height: 100%;
+}
+
+.task,.deadLines{
+    display: flex;
+    flex-direction: row;
+    height:auto;
+    background-color: var(--bluelg);
+    max-width:100%;
+    padding: 8px;
+    margin:4px;
+    gap:16px;
+    border-radius:12px;
+    margin-bottom: 12px;;
+
+ 
+    
+}
+.task,.deadLines:hover{
+   
+    height:auto;
+    
+ 
+    
+}
+.task p{
+    overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+width: 100%;
+
+}
+.task p:hover{
+  
+   
+   height: auto;
+    overflow: visible; 
+    white-space: normal
+    
+  
+  
+}
+
+.container{
+    width:300px;
+    height: 360px;
+    border-radius:20px ;
+   box-shadow: -5px 10px var(--salmon);
+  
+padding:12px;
+   background-color: rgb(255, 255, 255);
+  
+}
+.task>i{
+    font-size: 30px
+}
+.divTitle{
+display: flex;
+justify-content: space-between;
+height: 32px;
+margin-bottom: 16px;
+}
+
+
+.chart{
+    height: 100%;
+    width: 100%;
+   
+}
+
+
+
+
+    .main{
+        display:grid;
+ 
+        grid-auto-rows: auto; 
+
+    gap:4vw
+    }
+    main{
+        display:flex;
+
+        gap:4vw;
+      
+            position: relative;
+          margin-left: 100px;
+            top:160px;
+         
+        
+    }
+    .sticky-elements{
+        position: sticky;
+        top:20px;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap:3vw
+       
+    }
+    .calender{
+        grid-column-start: 2;
+        grid-column-end:4;
+      height:580px;
+        overflow: hidden;
+        
+    
+    }
+ 
+
+    .pfp>img{
+        height: 40px;
+        border-radius: 20px;
+    }
+    .namebar{
+        position: fixed;
+   z-index:10;
+        height: 80px;
+        width: 100%;
+        background-image: linear-gradient(90deg,var(--bluehv),var(--bluelg));
+display: flex;
+justify-content: space-between;
+padding: 20px;
+padding-left: 90px;
+
+    }
+    .pfp{
+        width:200px;
+        height: 50px;;
+        display: flex;
+        gap:4px;
+        border: 1px solid white;
+        padding:4px;
+        border-radius: 20px;
+    }
+ 
+    
+.courses>.progress-bar img{
+  height:80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.courses{
+    display:grid;
+}
+.progress-bar {
+width:90px;
+height: 90px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(rgb(28, 148, 80) 75%, rgb(220, 244, 222) 0);   
+      display: flex; /* Use flexbox to center-align content */
+      justify-content: center;
+      align-items: center; 
+      grid-row: 1;
+      grid-column-start: 1;
+  }
+  .courses>.info{
+    grid-column-start: 2;
+  }
+  .spotify {
+    grid-row: span 2; 
+    grid-column: span 1; /* Default to span 1 column */
+    height: auto; /* Allow it to adjust its height automatically */
+}
+.footer {
+    background-color: var(--blue); /* Use your theme color */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center the text */
+    padding: 10px 20px; /* Add spacing around the text */
+    font-size: 14px; /* Slightly smaller text size */
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0; /* Align to the bottom of the viewport */
+    width: 100%; /* Full width of the page */
+    z-index: 10; /* Ensure it stays above other elements */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  .search>input{
+       
+    width:500px ;height:30px  ;
+    border-radius:20px;
+    border: #EDF0FF;
+}
+  
+    @media (max-width: 1024px) {
+        .grid-main {
+            grid-template-columns: 1fr;
+        }
+        .spotify {
+            grid-row: auto; /* Reset row span for smaller screens */
+            grid-column: span 2; /* Span across two columns if applicable */
+            height: auto; /* Adjust height for responsiveness */
+        }
+    .task-container{
+        grid-column: span 2;
+    }
+        .container {
+            width: 100%; /* Full width for containers on smaller screens */
+        }
+        .chart-container {
+            grid-column: span 2; /* Makes chart-container span across 2 columns */
+        }
+       main{
+        display:grid;
+    grid-template-columns: 1fr ;
+        
+       }
+       .calender iframe {
+        width: 100%; /* Make iframe full-width on mobile */
+        height: 300px; /* Adjust height for mobile view */
+    }
+    .calender{
+    grid-column-start: auto;
+    grid-column-end:auto;}
+    .search>input{
+       
+         width:200px ;height:30px  ;
+         border-radius:20px;
+    }
+    }
+    
+    /* On even smaller screens (like mobile), collapse to 1 column */
+    @media (max-width: 768px) {
+        .grid-main {
+            grid-template-columns: 1fr; /* 1 column on mobile */
+        }
+    
+        .spotify {
+            grid-row: auto; /* Reset row span */
+            grid-column: span 2; 
+            height: auto; /* Ensure it resizes properly */
+        }
+    
+        .container {
+            grid-column:span 2;
+        }
+        .chart-container {
+            grid-column: span 2; /* Makes chart-container span across 2 columns */
+        }
+        .calender iframe {
+            width: 100%; /* Make iframe full-width on mobile */
+            height: 300px; /* Adjust height for mobile view */
+        }
+        .calender{
+            grid-column-start: auto;
+            grid-column-end:auto;}
+    
+    
+            .footer {
+                font-size: 12px; /* Adjust font size for smaller screens */
+                padding: 8px 10px; /* Reduce padding */
+              }
+        }
